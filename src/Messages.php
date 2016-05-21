@@ -49,7 +49,7 @@ class Messages extends Main
 
         return $this->setStatusCode( 200 )
                     ->setStatusText( 'success' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -65,7 +65,7 @@ class Messages extends Main
 
         return $this->setStatusCode( 200 )
                     ->setStatusText( 'success' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -77,11 +77,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function deleteFaild( $massage = 'Oops... Delete action was not successfully executed') {
+    public function deleteFaild( $message = 'Oops... Delete action was not successfully executed') {
 
         return $this->setStatusCode( 447 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -93,7 +93,7 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function updateFaild( $massage = 'Oops... Update action was not successfully executed' ) {
+    public function updateFaild( $message = 'Oops... Update action was not successfully executed' ) {
 
         return $this->setStatusCode( 449 )
                     ->setStatusText( 'fail' )
@@ -109,11 +109,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function insertFaild( $massage = 'Oops... Insert action was not successfully executed' ) {
+    public function insertFaild( $message = 'Oops... Insert action was not successfully executed' ) {
 
         return $this->setStatusCode( 448 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -125,11 +125,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function connectionRefused( $massage = 'Oops... Database connection refused' ) {
+    public function connectionRefused( $message = 'Oops... Database connection refused' ) {
 
         return $this->setStatusCode( 445 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
     
@@ -141,11 +141,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function notFound( $massage = 'Oops... The requested page not found!' ) {
+    public function notFound( $message = 'Oops... The requested page not found!' ) {
 
         return $this->setStatusCode( 404 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -157,11 +157,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function wrongParameters( $massage = 'Oops... The parameters you entered are wrong!' ) {
+    public function wrongParameters( $message = 'Oops... The parameters you entered are wrong!' ) {
 
         return $this->setStatusCode( 406 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -173,11 +173,11 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function methodNotAllowed( $massage = 'Oops... The method you requested is not allowed!' ) {
+    public function methodNotAllowed( $message = 'Oops... The method you requested is not allowed!' ) {
 
         return $this->setStatusCode( 405 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
 
@@ -205,13 +205,12 @@ class Messages extends Main
      * @uses 
      * @see
      */
-    public function requestFieldNotFound( $massage = 'Oops... Requested field is not found!' ) {
+    public function requestFieldNotFound( $message = 'Oops... Requested field is not found!' ) {
 
         return $this->setStatusCode( 446 )
                     ->setStatusText( 'fail' )
-                    ->respondWithMessage( $massage );
+                    ->respondWithMessage( $message );
 
     }
-
 
 }
