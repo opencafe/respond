@@ -2,7 +2,7 @@
 
 This package is provided to be used on laravel framework v5 and upper and it gives clean methods to handle json response with specific predetermined messages.
 
-*The package is in process.
+**The package is in process.**
 
 ## Install
 
@@ -30,7 +30,7 @@ You can use these methods in deffernt ways:
 
 There are hot ones for quick usage, besides some provided to manage outputs on your own way
 
-** Some are shown below: **
+**Some are shown below:**
 
 
 When request succeeds and contains data to return as a result:
@@ -96,7 +96,7 @@ Validation errors:
 ``` php
 Respond::validationErrors( $data );
 ```
-** Note: ** If you use laravel FormRequest,to prevnet iteration, we recommond try this method in App\Http\Request.php and override response method of Illuminate FormRequest
+**Note:** If you use laravel FormRequest,to prevnet iteration, we recommond try this method in App\Http\Request.php and override response method of Illuminate FormRequest
 
 ###customization
 Set custom message for methods is like this:
