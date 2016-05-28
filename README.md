@@ -1,6 +1,12 @@
+[![Build Status](https://travis-ci.org/anetwork/validation.svg?branch=master)](https://travis-ci.org/anetwork/validation)
+
 # Laravel Respond
 
 This package is provided to be used on laravel framework v5 and upper and it gives clean methods to handle json response with specific predetermined messages.
+
+# Requirement
+* Laravel ^5.1
+* PHP ^5.5
 
 **The package is in process.**
 
