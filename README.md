@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/anetwork/validation.svg?branch=master)](https://travis-ci.org/anetwork/validation)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/anetwork/respond/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/anetwork/respond/?branch=master) 
+[![Build Status](https://travis-ci.org/anetwork/respond.svg?branch=master)](https://travis-ci.org/anetwork/respond)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/anetwork/respond/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/anetwork/respond/?branch=master)
 
 # Laravel Respond
 
@@ -26,7 +26,7 @@ Add the following provider to providers part of config/app.php
 Anetwork\Respond\RespondServiceProvider::class
 ```
 
-and the following Facade to the aliases part 
+and the following Facade to the aliases part
 ``` php
 'Respond' => Anetwork\Respond\Facades\Respond::class
 ```
