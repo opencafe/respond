@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/anetwork/validation.svg?branch=master)](https://travis-ci.org/anetwork/validation)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/anetwork/respond/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/anetwork/respond/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/anetwork/respond/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/anetwork/respond/?branch=master) 
 
 # Laravel Respond
 
