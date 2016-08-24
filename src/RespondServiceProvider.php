@@ -13,7 +13,9 @@ class RespondServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      $this->publishes([
+        __DIR__.'/config/errors.php' => config_path('errors.php'),
+      ]);
     }
 
 
@@ -26,7 +28,7 @@ class RespondServiceProvider extends ServiceProvider
     {
 
         $this->registerMessages();
-        
+
     }
 
     private function registerMessages()

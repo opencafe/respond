@@ -4,13 +4,13 @@ namespace Anetwork\Respond;
 
 class Messages extends Main
 {
-    
+
     /**
      * Request succeeded and contains json result
      * @param array $data
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @since May 2, 2016 9:50:51 AM
-     * @uses 
+     * @uses
      * @see
      */
     public function succeed( $data ) {
@@ -26,7 +26,7 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:52:05 AM
-     * @uses 
+     * @uses
      * @see
      */
     public function deleteSucceeded( $message = 'The requested parameter is deleted successfully!' ) {
@@ -36,13 +36,13 @@ class Messages extends Main
                     ->respondWithMessage( $message );
 
     }
-    
+
     /**
      * Update action is succeed
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:52:52 AM
-     * @uses 
+     * @uses
      * @see
      */
     public function updateSucceeded( $message = 'The requested parameter is updated successfully!' ) {
@@ -58,7 +58,7 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:53:26 AM
-     * @uses 
+     * @uses
      * @see
      */
     public function insertSucceeded( $message = 'The requested parameter is Added successfully!' ) {
@@ -74,14 +74,14 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:53:53 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function deleteFaild( $message = 'Oops... Delete action was not successfully executed') {
+    public function deleteFaild() {
 
         return $this->setStatusCode( 447 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5447 )
+                    ->respondWithMessage();
 
     }
 
@@ -90,14 +90,14 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:54:09 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function updateFaild( $message = 'Oops... Update action was not successfully executed' ) {
+    public function updateFaild() {
 
         return $this->setStatusCode( 449 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5449 )
+                    ->respondWithMessage();
 
     }
 
@@ -106,14 +106,14 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:54:27 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function insertFaild( $message = 'Oops... Insert action was not successfully executed' ) {
+    public function insertFaild() {
 
         return $this->setStatusCode( 448 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5448 )
+                    ->respondWithMessage();
 
     }
 
@@ -122,30 +122,30 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:54:45 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function connectionRefused( $message = 'Oops... Database connection refused' ) {
+    public function connectionRefused() {
 
         return $this->setStatusCode( 445 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5445 )
+                    ->respondWithMessage();
 
     }
-    
+
     /**
      * page requested is not found
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:55:20 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function notFound( $message = 'Oops... The requested page not found!' ) {
+    public function notFound() {
 
         return $this->setStatusCode( 404 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5404 )
+                    ->respondWithMessage();
 
     }
 
@@ -154,14 +154,14 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:55:20 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function wrongParameters( $message = 'Oops... The parameters you entered are wrong!' ) {
+    public function wrongParameters() {
 
         return $this->setStatusCode( 406 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5406 )
+                    ->respondWithMessage();
 
     }
 
@@ -170,14 +170,14 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:55:20 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function methodNotAllowed( $message = 'Oops... The method you requested is not allowed!' ) {
+    public function methodNotAllowed() {
 
         return $this->setStatusCode( 405 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 5405 )
+                    ->respondWithMessage();
 
     }
 
@@ -186,13 +186,13 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param Array $data
      * @since May 2, 2016 9:55:20 AM
-     * @uses 
+     * @uses
      * @see
      */
     public function validationErrors( $data ) {
 
         return $this->setStatusCode( 420 )
-                    ->setStatusText( 'Fail...Validation errors' )
+                    ->setErrorCode( 5420 )
                     ->respondWithResult( $data );
 
     }
@@ -202,15 +202,45 @@ class Messages extends Main
      * @author Shima Payro <sh.payro@anetwork.ir>
      * @param String $message
      * @since May 2, 2016 9:55:20 AM
-     * @uses 
+     * @uses
      * @see
      */
-    public function requestFieldNotFound( $message = 'Oops... Requested field is not found!' ) {
+    public function requestFieldNotFound() {
 
         return $this->setStatusCode( 446 )
-                    ->setStatusText( 'fail' )
-                    ->respondWithMessage( $message );
+                    ->setErrorCode( 1001 )
+                    ->respondWithMessage();
 
     }
+
+    /**
+     * The request field is doublicated
+     * @author Mehdi Hosseini <m.hosseini@anetwork.ir>
+     * @since August 24, 2016
+     * @return json
+     */
+    public function requestFieldDoublicated() {
+
+      return $this->setStatusCode(400)
+                  ->SetErrorCode(1004)
+                  ->respondWithMessage();
+
+    }
+
+    /**
+     * Custom error message according to error config file
+     * @author Mehdi Hosseini <m.hosseini@anetwork.ir>
+     * @since August 24, 2016
+     * @param $code integer
+     * @return json
+     */
+    public function error( $code ) {
+
+      return $this->SetStatusCode( 400 )
+                  ->setErrorCode( $code )
+                  ->respondWithMessage();
+
+    }
+
 
 }
