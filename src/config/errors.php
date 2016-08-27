@@ -116,7 +116,7 @@ return [
     'message' => 'An error occurred on token validation',
     'type' => 'error',
     'cat' => 'auth'
-  ]
+  ],
 
   5401 => [
     'message' => 'Authentication unauthorized...',
