@@ -29,48 +29,94 @@ return [
 
   3001 => [
     'message' => 'You are not logged on',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth',
+    'short' => 'not-logged-on'
   ],
 
   3002 => [
     'message' => 'Application token did not generated successfully',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3003 =>[
     'message' => 'User token did not generated successfully',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3004 => [
     'message' => 'Request token have no agency access',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3005 => [
     'message' => 'Request token did not contains user information',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3006 => [
     'message' => 'Did not set request token',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3007 => [
     'message' => 'can not decode the token',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3008 => [
     'message' => 'can not generate token for authentication',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
 
   3009 => [
     'message' => 'can not create token',
-    'type' => 'error'
+    'type' => 'error',
+    'cat' => 'auth'
   ],
+
+  3010 => [
+    'message' => 'Token expired!',
+    'type' => 'error',
+    'cat' => 'auth'
+  ],
+
+  3011 => [
+    'message' => 'Token is invalid!',
+    'type' => 'error',
+    'cat' => 'auth'
+  ],
+
+  3012 => [
+    'message' => 'Token Blacklisted',
+    'type' => 'error',
+    'cat' => 'auth'
+  ],
+
+  3013 => [
+    'message' => 'Payload invalid!',
+    'type' => 'error',
+    'cat' => 'auth'
+  ],
+
+  3014 => [
+    'message' => 'Claim Invalid',
+    'type' => 'error',
+    'cat' => 'auth'
+  ],
+
+  3015 => [
+    'message' => 'An error occurred on token validation',
+    'type' => 'error',
+    'cat' => 'auth'
+  ]
 
   5401 => [
     'message' => 'Authentication unauthorized...',
