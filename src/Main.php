@@ -191,10 +191,16 @@ class Main {
 		$res[ 'status' ] = $this->getStatusText();
 
 		//if it's about laravel validation error
-		if ( $this->getErrorCode() && $this->getStatusCode() == 420 )
-			$res[ 'error' ] = $this->getErrorCode();
+		if ( $this->getErrorCode() && $this->getStatusCode() == 420 ) {
 
-		$res[ 'result' ] = $data;
+			$res[ 'error' ] = $this->getErrorCode();
+			$res[ 'message' ] = $data;
+
+		} else {
+
+			$res[ 'result' ] = $data;
+
+		}
 
 		return $this->respond( $res );
 
