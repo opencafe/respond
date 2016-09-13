@@ -28,8 +28,13 @@ class Main {
 	 * Error code
 	 * @var integer
 	 */
-	 protected $errorCode;
+	protected $errorCode;
 
+	/**
+	 * Haeders
+	 * @var array
+	 */
+	protected $headers = [];
 
 	/**
 	 * Getter for $statusCode
@@ -102,7 +107,13 @@ class Main {
 	 */
 	public function respond( $data ) {
 
-		return response()->json( $data, $this->getStatusCode() );
+		$result = array_filter( $this->getHeaders() );
+
+		if ( empty( $result ) );
+			return response()->json( $data, $this->getStatusCode() );
+			
+		return response()->json( $data, $this->getStatusCode() )
+						->withHeaders( $this->getHeaders() );
 
 	}
 
@@ -176,6 +187,31 @@ class Main {
 
 	}
 
+	/**
+	 * Get headers
+	 * @author Shima Payro <sh.payro@anetwork.ir>
+	 * @since Sep 13, 2016
+	 * @return array
+	 */
+	public function getHeaders() {
+
+		return $this->headers;
+
+	}
+
+	/**
+	 * Get headers
+	 * @author Shima Payro <sh.payro@anetwork.ir>
+	 * @since Sep 13, 2016
+	 * @return array
+	 */
+	public function setHeaders( $statusText = [] ) {
+
+		$this->headers = $headers;
+
+		return $this;
+
+	} 
 
 	/**
 	 * Response which contains status and data
