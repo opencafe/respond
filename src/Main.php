@@ -200,12 +200,12 @@ class Main {
 	}
 
 	/**
-	 * Get headers
+	 * Set headers
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since Sep 13, 2016
 	 * @return array
 	 */
-	public function setHeaders( $statusText = [] ) {
+	public function setHeaders( $headers = [] ) {
 
 		$this->headers = $headers;
 
