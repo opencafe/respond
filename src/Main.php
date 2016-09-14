@@ -109,7 +109,7 @@ class Main {
 
 		$result = array_filter( $this->getHeaders() );
 
-		if ( empty( $result ) );
+		if ( empty( $result ) )
 			return response()->json( $data, $this->getStatusCode() );
 			
 		return response()->json( $data, $this->getStatusCode() )
