@@ -52,6 +52,7 @@ class Main {
 	 */
 	public function __construct() {
 
+
 		$this->lang = \App::getLocale();
 
 		$this->config = include __DIR__ . '/../errors/lang/' . $this->lang . '.php';

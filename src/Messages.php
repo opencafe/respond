@@ -74,7 +74,7 @@ class Messages extends Main
 			$message = $this->config[ 'success' ][ 'insert' ];
 
 		return $this->setStatusCode( 200 )
-					->setStatusText( $this->config[ 'success' ][ 'message' ] )
+					->setStatusText( 'success' )
 					->respondWithMessage( $message );
 
 	}
@@ -104,12 +104,12 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function updateFaild() {
+	public function updateFaild( $message ) {
 
 		return $this->setStatusCode( 449 )
 					->setStatusText( 'fail' )
 					->setErrorCode( 5449 )
-					->respondWithMessage();
+					->respondWithMessage( $message );
 
 	}
 
@@ -121,12 +121,12 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function insertFaild() {
+	public function insertFaild( $message ) {
 
 		return $this->setStatusCode( 448 )
 					->setStatusText( 'fail' )
 					->setErrorCode( 5448 )
-					->respondWithMessage();
+					->respondWithMessage( $message );
 
 	}
 
