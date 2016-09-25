@@ -5,6 +5,7 @@ namespace Anetwork\Respond;
 class Messages extends Main
 {
 
+
 	/**
 	 * Request succeeded and contains json result
 	 * @param array $data
@@ -29,7 +30,10 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function deleteSucceeded( $message = 'The requested parameter is deleted successfully!' ) {
+	public function deleteSucceeded( $message ) {
+
+		if ( empty( $message ) )
+			$message = $this->config[ 'success' ][ 'delete' ];
 
 		return $this->setStatusCode( 200 )
 					->setStatusText( 'success' )
@@ -45,7 +49,10 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function updateSucceeded( $message = 'The requested parameter is updated successfully!' ) {
+	public function updateSucceeded( $message ) {
+
+		if ( empty( $message ) )
+			$message = $this->config[ 'success' ][ 'update' ];
 
 		return $this->setStatusCode( 200 )
 					->setStatusText( 'success' )
@@ -61,10 +68,13 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function insertSucceeded( $message = 'The requested parameter is Added successfully!' ) {
+	public function insertSucceeded( $message ) {
+
+		if ( empty( $message ) )
+			$message = $this->config[ 'success' ][ 'insert' ];
 
 		return $this->setStatusCode( 200 )
-					->setStatusText( 'success' )
+					->setStatusText( $this->config[ 'success' ][ 'message' ] )
 					->respondWithMessage( $message );
 
 	}
@@ -77,12 +87,12 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function deleteFaild() {
+	public function deleteFaild( $message ) {
 
 		return $this->setStatusCode( 447 )
 					->setStatusText( 'fail' )
 					->setErrorCode( 5447 )
-					->respondWithMessage();
+					->respondWithMessage( $message );
 
 	}
 

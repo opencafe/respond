@@ -14,8 +14,10 @@ class RespondServiceProvider extends ServiceProvider
 	public function boot()
 	{
 
+		$lang = \App::getLocale();
+
 		$this->publishes([
-			__DIR__.'/config/errors.php' => config_path('errors.php'),
+			__DIR__.'/../errors/lang/' . $lang . '.php' => config_path( $lang . '.php' ),
 		]);
 
 	}

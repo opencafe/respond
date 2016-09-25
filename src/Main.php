@@ -37,6 +37,28 @@ class Main {
 	protected $headers = [];
 
 	/**
+	 * @var string
+	 */
+	protected $lang;
+
+	/**
+	 * @var arry
+	 */
+	protected $config;
+
+	/**
+	 * @author Shahrokh Niakan <sh.niakan@anetwork.ir>
+	 * @since Sep 24, 2016
+	 */
+	public function __construct() {
+
+		$this->lang = \App::getLocale();
+
+		$this->config = include __DIR__ . '/../errors/lang/' . $this->lang . '.php';
+
+	}
+
+	/**
 	 * Getter for $statusCode
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:46:27 AM
@@ -111,7 +133,7 @@ class Main {
 
 		if ( empty( $result ) )
 			return response()->json( $data, $this->getStatusCode() );
-			
+
 		return response()->json( $data, $this->getStatusCode() )
 						->withHeaders( $this->getHeaders() );
 
@@ -126,7 +148,7 @@ class Main {
 	 * @uses
 	 * @see
 	 */
-	public function respondWithMessage( $message = NULL ) {
+	public function respondWithMessage( $message ) {
 
 		$res[ 'status' ] = $this->getStatusText();
 
@@ -134,8 +156,12 @@ class Main {
 		if ( $this->getErrorCode() ) {
 
 			$res[ 'error' ] = $this->getErrorCode();
-			$res[ 'message' ] = $this->getErrorMessage();
-			
+
+			if ( empty( $message ) )
+				$res[ 'message' ] = $this->getErrorMessage();
+
+			$res[ 'message' ] = $message;
+
 		} else {
 
 			$res[ 'message' ] = $message;
@@ -155,7 +181,7 @@ class Main {
 	 */
 	public function setErrorCode( $errorCode ) {
 
-		$this->error = config( 'errors.' . $errorCode );
+		$this->error = $this->config[ $errorCode ];
 
 		$this->errorCode = $errorCode;
 
@@ -211,7 +237,7 @@ class Main {
 
 		return $this;
 
-	} 
+	}
 
 	/**
 	 * Response which contains status and data

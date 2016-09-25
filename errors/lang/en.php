@@ -2,6 +2,16 @@
 
 return [
 
+	'success' => [
+
+		'insert'	=> 'The requested parameter is Added successfully!',
+
+		'delete'	=> 'The requested parameter is deleted successfully!',
+
+		'update'	=> 'The requested parameter is updated successfully!'
+
+	],
+
 	1001 => [
 		'message' => 'Oops... Requested field is not found!',
 		'type' => 'error'
@@ -117,6 +127,12 @@ return [
 		'type' => 'error',
 		'cat' => 'auth'
 	],
+
+	3016 => [
+
+		'message' => 'This domain has been blocked',
+		'type' => 'error'
+	]
 
 	5401 => [
 		'message' => 'Authentication unauthorized...',
