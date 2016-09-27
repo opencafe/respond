@@ -158,10 +158,10 @@ class Main {
 
 			$res[ 'error' ] = $this->getErrorCode();
 
-			if ( empty( $message ) )
-				$res[ 'message' ] = $this->getErrorMessage();
-
-			$res[ 'message' ] = $message;
+			if ( is_null( $message ) )
+		     $res[ 'message' ] = $this->getErrorMessage();
+		    else
+		     $res[ 'message' ] = $message;
 
 		} else {
 
