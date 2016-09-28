@@ -42,7 +42,7 @@ class Main {
 	protected $lang;
 
 	/**
-	 * @var arry
+	 * @var array
 	 */
 	protected $config;
 

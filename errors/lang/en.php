@@ -132,7 +132,7 @@ return [
 
 		'message' => 'This domain has been blocked',
 		'type' => 'error'
-	]
+	],
 
 	5401 => [
 		'message' => 'Authentication unauthorized...',
