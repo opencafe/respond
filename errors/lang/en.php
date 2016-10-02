@@ -12,6 +12,16 @@ return [
 
 	],
 
+	'fail' => [
+
+		'insert'	=> 'The requested parameter is not Added!',
+
+		'delete'	=> 'The requested parameter is not deleted!',
+
+		'update'	=> 'The requested parameter is not updated!'
+
+	],
+
 	1001 => [
 		'message' => 'Oops... Requested field is not found!',
 		'type' => 'error'

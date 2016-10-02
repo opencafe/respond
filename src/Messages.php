@@ -30,9 +30,9 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function deleteSucceeded( $message ) {
+	public function deleteSucceeded( $message = null ) {
 
-		if ( empty( $message ) )
+		if ( is_null( $message ) )
 			$message = $this->config[ 'success' ][ 'delete' ];
 
 		return $this->setStatusCode( 200 )
@@ -49,9 +49,9 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function updateSucceeded( $message ) {
+	public function updateSucceeded( $message = null ) {
 
-		if ( empty( $message ) )
+		if ( is_null( $message ) )
 			$message = $this->config[ 'success' ][ 'update' ];
 
 		return $this->setStatusCode( 200 )
@@ -68,9 +68,9 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function insertSucceeded( $message ) {
+	public function insertSucceeded( $message = null ) {
 
-		if ( empty( $message ) )
+		if ( is_null( $message ) )
 			$message = $this->config[ 'success' ][ 'insert' ];
 
 		return $this->setStatusCode( 200 )
@@ -87,7 +87,10 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function deleteFaild( $message ) {
+	public function deleteFaild( $message = null ) {
+
+		if ( is_null( $message ) )
+			$message = $this->config[ 'fail' ][ 'delete' ];
 
 		return $this->setStatusCode( 447 )
 					->setStatusText( 'fail' )
@@ -104,7 +107,10 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function updateFaild( $message ) {
+	public function updateFaild( $message = null ) {
+
+		if ( is_null( $message ) )
+			$message = $this->config[ 'fail' ][ 'update' ];
 
 		return $this->setStatusCode( 449 )
 					->setStatusText( 'fail' )
@@ -121,7 +127,10 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function insertFaild( $message ) {
+	public function insertFaild( $message = null ) {
+
+		if ( is_null( $message ) )
+			$message = $this->config[ 'fail' ][ 'insert' ];
 
 		return $this->setStatusCode( 448 )
 					->setStatusText( 'fail' )
