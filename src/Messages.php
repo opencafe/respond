@@ -215,12 +215,12 @@ class Messages extends Main
 	 * @uses
 	 * @see
 	 */
-	public function validationErrors( $data ) {
+	public function validationErrors( $message = null ) {
 
 		return $this->setStatusCode( 420 )
 					->setStatusText( 'fail' )
 					->setErrorCode( 5420 )
-					->respondWithResult( $data );
+					->respondWithResult( $message );
 
 	}
 
