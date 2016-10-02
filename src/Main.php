@@ -149,7 +149,7 @@ class Main {
 	 * @uses
 	 * @see
 	 */
-	public function respondWithMessage( $message ) {
+	public function respondWithMessage( $message = null ) {
 
 		$res[ 'status' ] = $this->getStatusText();
 
