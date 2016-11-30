@@ -2,8 +2,6 @@
 
 namespace Anetwork\Respond;
 
-use Illuminate\Http\Response;
-
 class Main {
 
 	/**
