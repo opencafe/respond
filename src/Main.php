@@ -75,7 +75,7 @@ class Main {
 	/**
 	 * Setter for $statusCode
 	 * @param integer $statusCode
-	 * @return App\Htpp\Responds\Respond
+	 * @return $this
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:47:04 AM
 	 * @uses
@@ -105,7 +105,7 @@ class Main {
 	/**
 	 * Setter for $statusText
 	 * @param String $statusText
-	 * @return App\HtppApp\Htpp\Responds\Respond
+	 * @return $this
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:48:23 AM
 	 * @uses
