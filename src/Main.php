@@ -2,8 +2,6 @@
 
 namespace Anetwork\Respond;
 
-use Illuminate\Http\Response;
-
 class Main {
 
 	/**
@@ -75,7 +73,7 @@ class Main {
 	/**
 	 * Setter for $statusCode
 	 * @param integer $statusCode
-	 * @return App\Htpp\Responds\Respond
+	 * @return $this
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:47:04 AM
 	 * @uses
@@ -105,7 +103,7 @@ class Main {
 	/**
 	 * Setter for $statusText
 	 * @param String $statusText
-	 * @return App\HtppApp\Htpp\Responds\Respond
+	 * @return $this
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:48:23 AM
 	 * @uses
@@ -121,8 +119,8 @@ class Main {
 
 	/**
 	 * Response
-	 * @param json $data
-	 * @return jsom
+	 * @param $data : json
+	 * @return $this|\Illuminate\Http\JsonResponse
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:48:45 AM
 	 * @uses
@@ -145,7 +143,7 @@ class Main {
 	 * @param string $message
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:49:21 AM
-	 * @return json
+	 * @return Main|\Illuminate\Http\JsonResponse
 	 * @uses
 	 * @see
 	 */
@@ -178,7 +176,7 @@ class Main {
 	 * @author Mehdi Hosseini <m.hosseini@anetwork.ir>
 	 * @since August 24, 2016
 	 * @param $errorCode integer
-	 * @return instance
+	 * @return $this
 	 */
 	public function setErrorCode( $errorCode ) {
 
@@ -242,10 +240,10 @@ class Main {
 
 	/**
 	 * Response which contains status and data
-	 * @param json $data
+	 * @param null|array $data
 	 * @author Shima Payro <sh.payro@anetwork.ir>
 	 * @since May 2, 2016 9:50:19 AM
-	 * @return json
+	 * @return Main|\Illuminate\Http\JsonResponse
 	 * @uses
 	 * @see
 	 */

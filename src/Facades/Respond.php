@@ -12,6 +12,9 @@ class Respond extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'Anetwork\Respond\Messages'; }
+	protected static function getFacadeAccessor()
+    { 
+        return 'Anetwork\Respond\Messages'; 
+    }
 
 }

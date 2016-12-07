@@ -5,7 +5,6 @@ namespace Anetwork\Respond;
 class Messages extends Main
 {
 
-
 	/**
 	 * Request succeeded and contains json result
 	 * @param array $data
@@ -210,7 +209,7 @@ class Messages extends Main
 	/**
 	 * There ara validation errors
 	 * @author Shima Payro <sh.payro@anetwork.ir>
-	 * @param Array $data
+	 * @param $data array
 	 * @since May 2, 2016 9:55:20 AM
 	 * @uses
 	 * @see
@@ -245,7 +244,7 @@ class Messages extends Main
 	 * The request field is doublicated
 	 * @author Mehdi Hosseini <m.hosseini@anetwork.ir>
 	 * @since August 24, 2016
-	 * @return json
+	 * @return mixed
 	 */
 	public function requestFieldDuplicated() {
 
@@ -261,7 +260,7 @@ class Messages extends Main
 	 * @author Mehdi Hosseini <m.hosseini@anetwork.ir>
 	 * @since August 24, 2016
 	 * @param $code integer
-	 * @return json
+	 * @return mixed
 	 */
 	public function error( $code ) {
 
