@@ -53,7 +53,11 @@ class Main {
 
 		$this->lang = \App::getLocale();
 
-		$this->config = include __DIR__ . '/../errors/lang/' . $this->lang . '.php';
+		if(! file_exists(config_path($this->lang . '.php'))){
+            $this->config = include __DIR__ . '/../errors/lang/' . $this->lang . '.php';
+        } else {
+            $this->config = include config_path($this->lang . '.php');
+        }
 
 	}
 
