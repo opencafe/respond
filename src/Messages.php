@@ -264,7 +264,7 @@ class Messages extends Main
 	 */
 	public function error( $code ) {
 
-	  return $this->SetStatusCode( 400 )
+	  return $this->setStatusCode( 400 )
 					->setStatusText( 'fail' )
 					->setErrorCode( $code )
 					->respondWithMessage();
