@@ -9,14 +9,6 @@
     ],
     "homepage": "https://github.com/anetwork",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Pemiphilo",
-            "email": "sh.payro@anetwork.ir",
-            "homepage": "http://anetwork.ir",
-            "role": "Developer"
-        }
-    ],
     "require": {
         "illuminate/support": "~5.1",
         "php" : "~5.5|~7.0"
